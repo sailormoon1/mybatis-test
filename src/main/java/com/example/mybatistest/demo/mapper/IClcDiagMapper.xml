@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mybatistest.demo.mapper.IClcDiagMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.mybatistest.demo.entity.ClcDiagEntity">
+        <result column="hosnum" property="hosnum"/>
+        <result column="diagid" property="diagid"/>
+        <result column="dtmainid" property="dtmainid"/>
+        <result column="rsheetno" property="rsheetno"/>
+        <result column="diagno" property="diagno"/>
+        <result column="diagname" property="diagname"/>
+        <result column="deptcode" property="deptcode"/>
+        <result column="deptname" property="deptname"/>
+        <result column="doctorid" property="doctorid"/>
+        <result column="doctorname" property="doctorname"/>
+        <result column="diagtype" property="diagtype"/>
+        <result column="diagclass" property="diagclass"/>
+        <result column="surestatus" property="surestatus"/>
+        <result column="cmedflag" property="cmedflag"/>
+        <result column="diagdate" property="diagdate"/>
+        <result column="comments" property="comments"/>
+        <result column="nodecode" property="nodecode"/>
+        <result column="begindate" property="begindate"/>
+        <result column="icd10" property="icd10"/>
+        <result column="ref_id" property="refId"/>
+        <result column="condition" property="condition"/>
+        <result column="sn" property="sn"/>
+        <result column="position" property="position"/>
+        <result column="syndrome_no" property="syndromeNo"/>
+        <result column="syndrome_name" property="syndromeName"/>
+        <result column="tracelog" property="tracelog"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+                hosnum,
+                diagid,
+                dtmainid,
+                rsheetno,
+                diagno,
+                diagname,
+                deptcode,
+                deptname,
+                doctorid,
+                doctorname,
+                diagtype,
+                diagclass,
+                surestatus,
+                cmedflag,
+                diagdate,
+                comments,
+                nodecode,
+                begindate,
+                icd10,
+                ref_id,
+                condition,
+                sn,
+                position,
+                syndrome_no,
+                syndrome_name,
+                tracelog,
+                update_time
+    </sql>
+
+    <insert id="insert" parameterType="com.example.mybatistest.demo.entity.ClcDiagEntity">
+        INSERT INTO clc_diag
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test=" null != hosnum and '' != hosnum  ">
+                hosnum,
+            </if>
+            <if test=" null != diagid and '' != diagid  ">
+                diagid,
+            </if>
+            <if test=" null != dtmainid and '' != dtmainid  ">
+                dtmainid,
+            </if>
+            <if test=" null != rsheetno and '' != rsheetno  ">
+                rsheetno,
+            </if>
+            <if test=" null != diagno and '' != diagno  ">
+                diagno,
+            </if>
+            <if test=" null != diagname and '' != diagname  ">
+                diagname,
+            </if>
+            <if test=" null != deptcode and '' != deptcode  ">
+                deptcode,
+            </if>
+            <if test=" null != deptname and '' != deptname  ">
+                deptname,
+            </if>
+            <if test=" null != doctorid and '' != doctorid  ">
+                doctorid,
+            </if>
+            <if test=" null != doctorname and '' != doctorname  ">
+                doctorname,
+            </if>
+            <if test=" null != diagtype and '' != diagtype  ">
+                diagtype,
+            </if>
+            <if test=" null != diagclass and '' != diagclass  ">
+                diagclass,
+            </if>
+            <if test=" null != surestatus and '' != surestatus  ">
+                surestatus,
+            </if>
+            <if test=" null != cmedflag and '' != cmedflag  ">
+                cmedflag,
+            </if>
+            <if test=" null != diagdate">
+                diagdate,
+            </if>
+            <if test=" null != comments and '' != comments  ">
+                comments,
+            </if>
+            <if test=" null != nodecode and '' != nodecode  ">
+                nodecode,
+            </if>
+            <if test=" null != begindate">
+                begindate,
+            </if>
+            <if test=" null != icd10 and '' != icd10  ">
+                icd10,
+            </if>
+            <if test=" null != refId and '' != refId  ">
+                ref_id,
+            </if>
+            <if test=" null != condition and '' != condition  ">
+                condition,
+            </if>
+            <if test=" null != sn and '' != sn  ">
+                sn,
+            </if>
+            <if test=" null != position and '' != position  ">
+                position,
+            </if>
+            <if test=" null != syndromeNo and '' != syndromeNo  ">
+                syndrome_no,
+            </if>
+            <if test=" null != syndromeName and '' != syndromeName  ">
+                syndrome_name,
+            </if>
+            <if test=" null != tracelog">
+                tracelog,
+            </if>
+            <if test=" null != updateTime">
+                update_time
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test=" null != hosnum and '' != hosnum  ">
+
+                #{hosnum},
+            </if>
+            <if test=" null != diagid and '' != diagid  ">
+
+                #{diagid},
+            </if>
+            <if test=" null != dtmainid and '' != dtmainid  ">
+
+                #{dtmainid},
+            </if>
+            <if test=" null != rsheetno and '' != rsheetno  ">
+
+                #{rsheetno},
+            </if>
+            <if test=" null != diagno and '' != diagno  ">
+
+                #{diagno},
+            </if>
+            <if test=" null != diagname and '' != diagname  ">
+
+                #{diagname},
+            </if>
+            <if test=" null != deptcode and '' != deptcode  ">
+
+                #{deptcode},
+            </if>
+            <if test=" null != deptname and '' != deptname  ">
+
+                #{deptname},
+            </if>
+            <if test=" null != doctorid and '' != doctorid  ">
+
+                #{doctorid},
+            </if>
+            <if test=" null != doctorname and '' != doctorname  ">
+
+                #{doctorname},
+            </if>
+            <if test=" null != diagtype and '' != diagtype  ">
+
+                #{diagtype},
+            </if>
+            <if test=" null != diagclass and '' != diagclass  ">
+
+                #{diagclass},
+            </if>
+            <if test=" null != surestatus and '' != surestatus  ">
+
+                #{surestatus},
+            </if>
+            <if test=" null != cmedflag and '' != cmedflag  ">
+
+                #{cmedflag},
+            </if>
+            <if test=" null != diagdate">
+
+                #{diagdate},
+            </if>
+            <if test=" null != comments and '' != comments  ">
+
+                #{comments},
+            </if>
+            <if test=" null != nodecode and '' != nodecode  ">
+
+                #{nodecode},
+            </if>
+            <if test=" null != begindate">
+
+                #{begindate},
+            </if>
+            <if test=" null != icd10 and '' != icd10  ">
+
+                #{icd10},
+            </if>
+            <if test=" null != refId and '' != refId  ">
+
+                #{refId},
+            </if>
+            <if test=" null != condition and '' != condition  ">
+
+                #{condition},
+            </if>
+            <if test=" null != sn and '' != sn  ">
+
+                #{sn},
+            </if>
+            <if test=" null != position and '' != position  ">
+
+                #{position},
+            </if>
+            <if test=" null != syndromeNo and '' != syndromeNo  ">
+
+                #{syndromeNo},
+            </if>
+            <if test=" null != syndromeName and '' != syndromeName  ">
+
+                #{syndromeName},
+            </if>
+            <if test=" null != tracelog">
+
+                #{tracelog},
+            </if>
+            <if test=" null != updateTime">
+
+                #{updateTime}
+            </if>
+        </trim>
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM clc_diag
+        WHERE id = #{id}
+    </delete>
+
+    <update id="update" parameterType="com.example.mybatistest.demo.entity.ClcDiagEntity">
+        UPDATE clc_diag
+        <set>
+            <if test=" null != hosnum and '' != hosnum  ">
+                hosnum = #{hosnum},
+            </if>
+            <if test=" null != diagid and '' != diagid  ">
+                diagid = #{diagid},
+            </if>
+            <if test=" null != dtmainid and '' != dtmainid  ">
+                dtmainid = #{dtmainid},
+            </if>
+            <if test=" null != rsheetno and '' != rsheetno  ">
+                rsheetno = #{rsheetno},
+            </if>
+            <if test=" null != diagno and '' != diagno  ">
+                diagno = #{diagno},
+            </if>
+            <if test=" null != diagname and '' != diagname  ">
+                diagname = #{diagname},
+            </if>
+            <if test=" null != deptcode and '' != deptcode  ">
+                deptcode = #{deptcode},
+            </if>
+            <if test=" null != deptname and '' != deptname  ">
+                deptname = #{deptname},
+            </if>
+            <if test=" null != doctorid and '' != doctorid  ">
+                doctorid = #{doctorid},
+            </if>
+            <if test=" null != doctorname and '' != doctorname  ">
+                doctorname = #{doctorname},
+            </if>
+            <if test=" null != diagtype and '' != diagtype  ">
+                diagtype = #{diagtype},
+            </if>
+            <if test=" null != diagclass and '' != diagclass  ">
+                diagclass = #{diagclass},
+            </if>
+            <if test=" null != surestatus and '' != surestatus  ">
+                surestatus = #{surestatus},
+            </if>
+            <if test=" null != cmedflag and '' != cmedflag  ">
+                cmedflag = #{cmedflag},
+            </if>
+            <if test=" null != diagdate and '' != diagdate  ">
+                diagdate = #{diagdate},
+            </if>
+            <if test=" null != comments and '' != comments  ">
+                comments = #{comments},
+            </if>
+            <if test=" null != nodecode and '' != nodecode  ">
+                nodecode = #{nodecode},
+            </if>
+            <if test=" null != begindate and '' != begindate  ">
+                begindate = #{begindate},
+            </if>
+            <if test=" null != icd10 and '' != icd10  ">
+                icd10 = #{icd10},
+            </if>
+            <if test=" null != refId and '' != refId  ">
+                ref_id = #{refId},
+            </if>
+            <if test=" null != condition and '' != condition  ">
+                condition = #{condition},
+            </if>
+            <if test=" null != sn and '' != sn  ">
+                sn = #{sn},
+            </if>
+            <if test=" null != position and '' != position  ">
+                position = #{position},
+            </if>
+            <if test=" null != syndromeNo and '' != syndromeNo  ">
+                syndrome_no = #{syndromeNo},
+            </if>
+            <if test=" null != syndromeName and '' != syndromeName  ">
+                syndrome_name = #{syndromeName},
+            </if>
+            <if test=" null != tracelog and '' != tracelog  ">
+                tracelog = #{tracelog},
+            </if>
+            <if test=" null != updateTime and '' != updateTime  ">
+                update_time = #{updateTime}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <update id="updateByDiagId" parameterType="com.example.mybatistest.demo.entity.ClcDiagEntity">
+        UPDATE clc_diag
+        <set>
+            <if test=" null != hosnum and '' != hosnum  ">
+                hosnum = #{hosnum},
+            </if>
+            <if test=" null != dtmainid and '' != dtmainid  ">
+                dtmainid = #{dtmainid},
+            </if>
+            <if test=" null != rsheetno and '' != rsheetno  ">
+                rsheetno = #{rsheetno},
+            </if>
+            <if test=" null != diagno and '' != diagno  ">
+                diagno = #{diagno},
+            </if>
+            <if test=" null != diagname and '' != diagname  ">
+                diagname = #{diagname},
+            </if>
+            <if test=" null != deptcode and '' != deptcode  ">
+                deptcode = #{deptcode},
+            </if>
+            <if test=" null != deptname and '' != deptname  ">
+                deptname = #{deptname},
+            </if>
+            <if test=" null != doctorid and '' != doctorid  ">
+                doctorid = #{doctorid},
+            </if>
+            <if test=" null != doctorname and '' != doctorname  ">
+                doctorname = #{doctorname},
+            </if>
+            <if test=" null != diagtype and '' != diagtype  ">
+                diagtype = #{diagtype},
+            </if>
+            <if test=" null != diagclass and '' != diagclass  ">
+                diagclass = #{diagclass},
+            </if>
+            <if test=" null != surestatus and '' != surestatus  ">
+                surestatus = #{surestatus},
+            </if>
+            <if test=" null != cmedflag and '' != cmedflag  ">
+                cmedflag = #{cmedflag},
+            </if>
+            <if test=" null != diagdate and '' != diagdate  ">
+                diagdate = #{diagdate},
+            </if>
+            <if test=" null != comments and '' != comments  ">
+                comments = #{comments},
+            </if>
+            <if test=" null != nodecode and '' != nodecode  ">
+                nodecode = #{nodecode},
+            </if>
+            <if test=" null != begindate and '' != begindate  ">
+                begindate = #{begindate},
+            </if>
+            <if test=" null != icd10 and '' != icd10  ">
+                icd10 = #{icd10},
+            </if>
+            <if test=" null != refId and '' != refId  ">
+                ref_id = #{refId},
+            </if>
+            <if test=" null != condition and '' != condition  ">
+                condition = #{condition},
+            </if>
+            <if test=" null != sn and '' != sn  ">
+                sn = #{sn},
+            </if>
+            <if test=" null != position and '' != position  ">
+                position = #{position},
+            </if>
+            <if test=" null != syndromeNo and '' != syndromeNo  ">
+                syndrome_no = #{syndromeNo},
+            </if>
+            <if test=" null != syndromeName and '' != syndromeName  ">
+                syndrome_name = #{syndromeName},
+            </if>
+            <if test=" null != tracelog and '' != tracelog  ">
+                tracelog = #{tracelog},
+            </if>
+            <if test=" null != updateTime and '' != updateTime  ">
+                update_time = #{updateTime}
+            </if>
+        </set>
+        WHERE diagid = #{diagid}
+    </update>
+
+
+    <select id="queryById" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM clc_diag
+        WHERE id = #{id}
+    </select>
+
+    <select id="queryByDiagId" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM clc_diag
+        WHERE diagid = #{diagId}
+    </select>
+
+    <select id="pageListCount" resultType="java.lang.Integer">
+        SELECT count(1)
+        FROM clc_diag
+    </select>
+
+    <select id="getDiagInfo" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM clc_diag
+        where dtmainid = #{inpNo}
+        and diagtype = #{diagType}
+        and surestatus = #{diagStatus}
+    </select>
+
+
+    <select id="getDiagInfoByDiagTypeAndDtMainId" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM clc_diag
+        where dtmainid = #{dtMainId}
+        and diagtype = #{diagType}
+        order by DIAGDATE
+    </select>
+
+    <select id="getHospitalDiagInfo" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM clc_diag
+        where dtmainid in
+        <foreach collection="inpNoList" item="inpNo" index="i" open="(" separator=","
+                 close=")">
+            #{inpNo}
+        </foreach>
+        and diagtype in
+        <foreach collection="diagTypeList" item="diagType" index="i" open="(" separator=","
+                 close=")">
+            #{diagType}
+        </foreach>
+        and surestatus = #{sureStatus}
+        and DIAGCLASS = #{diagClass}
+    </select>
+
+    <select id="queryByDtmainId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from clc_diag
+        where hosnum = #{hosNum} and dtmainid = #{dtmainId}
+        order by tracelog asc
+
+
+    </select>
+
+    <delete id="deleteByDiagTypeAndDtMainId">
+        DELETE FROM clc_diag
+        WHERE  dtmainid= #{dtMainId}
+        and diagtype =#{diagType}
+    </delete>
+
+</mapper>
