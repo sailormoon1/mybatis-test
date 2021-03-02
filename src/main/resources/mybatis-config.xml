@@ -16,6 +16,8 @@
             <transactionManager type="JDBC"></transactionManager>
             <dataSource type="POOLED">
                 <property name="driver" value="oracle.jdbc.OracleDriver"/>
+<!--                <property name="username" value="UTFXMkUzaGlzX2Nxd3k="/>-->
+<!--                <property name="password" value="UTFXMkUzdGVzdF8yMDE5"/>-->
                 <property name="username" value="his_cqwy"/>
                 <property name="password" value="test_2019"/>
                 <property name="url" value="jdbc:oracle:thin:@192.168.1.79:1521:orcl"/>
